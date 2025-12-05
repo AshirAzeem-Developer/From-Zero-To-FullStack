@@ -1,0 +1,79 @@
+<!-- Task 4: Design a navigation menu using semantic HTML5 elements -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Navigation Menu Example</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
+
+      header {
+        background-color: #1e90ff;
+        padding: 15px 30px;
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      nav ul {
+        list-style: none;
+        display: flex;
+        gap: 20px;
+        margin: 0;
+        padding: 0;
+      }
+
+      nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      nav ul li a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <!-- Logo / Brand -->
+      <h1>MyWebsite</h1>
+
+      <!-- Navigation -->
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Sections -->
+    <main>
+      <section id="home">
+        <h2>Home Section</h2>
+        <p>Welcome to the homepage.</p>
+      </section>
+
+      <section id="about">
+        <h2>About Section</h2>
+        <p>Learn more about us.</p>
+      </section>
+
+      <section id="services">
+        <h2>Services Section</h2>
+        <p>Our services are listed here.</p>
+      </section>
+
+      <section id="contact">
+        <h2>Contact Section</h2>
+        <p>Get in touch with us.</p>
+      </section>
+    </main>
+  </body>
+</html>
