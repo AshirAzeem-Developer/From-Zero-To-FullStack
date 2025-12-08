@@ -1,0 +1,252 @@
+<!-- Add smooth transitions to buttons and links -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Styled Pricing & Navbar</title>
+    <style>
+      /* General Body Styling */
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f0f2f5;
+        margin: 0;
+        padding: 0;
+      }
+
+      /* ===== Navbar ===== */
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #1e3a8a;
+        padding: 15px 30px;
+        color: #fff;
+      }
+
+      .navbar .logo {
+        font-size: 1.5rem;
+        font-weight: bold;
+      }
+
+      .navbar ul {
+        list-style: none;
+        display: flex;
+        gap: 20px;
+        margin: 0;
+        padding: 0;
+      }
+
+      .navbar ul li a {
+        text-decoration: none;
+        color: #fff;
+        font-weight: 500;
+        transition: color 0.3s ease, transform 0.3s ease;
+      }
+
+      .navbar ul li a:hover {
+        color: #fbbf24;
+        transform: scale(1.05);
+      }
+
+      .hamburger {
+        display: none;
+        flex-direction: column;
+        cursor: pointer;
+        gap: 5px;
+      }
+
+      .hamburger div {
+        width: 25px;
+        height: 3px;
+        background-color: #fff;
+      }
+
+      @media (max-width: 768px) {
+        .navbar ul {
+          position: absolute;
+          top: 60px;
+          left: 0;
+          width: 100%;
+          background-color: #1e3a8a;
+          flex-direction: column;
+          align-items: center;
+          gap: 15px;
+          padding: 20px 0;
+          max-height: 0;
+          overflow: hidden;
+          transition: max-height 0.3s ease-in-out;
+        }
+
+        .navbar ul.show {
+          max-height: 300px;
+        }
+
+        .hamburger {
+          display: flex;
+        }
+      }
+
+      /* ===== Pricing Table ===== */
+      .pricing-table {
+        width: 90%;
+        max-width: 900px;
+        margin: 50px auto;
+        border-collapse: collapse;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        overflow: hidden;
+        background-color: #fff;
+      }
+
+      .pricing-table th,
+      .pricing-table td {
+        text-align: center;
+        padding: 20px;
+        border-bottom: 1px solid #e5e7eb;
+        transition: background-color 0.3s ease;
+      }
+
+      .pricing-table th {
+        background-color: #1e3a8a;
+        color: #fff;
+        font-size: 1.1rem;
+      }
+
+      .pricing-table tr:hover td {
+        background-color: #f3f4f6;
+      }
+
+      td.price {
+        font-size: 1.5rem;
+        color: #2563eb;
+        font-weight: bold;
+      }
+
+      td button {
+        padding: 10px 20px;
+        background-color: #2563eb;
+        color: #fff;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        font-weight: 600;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+      }
+
+      td button:hover {
+        background-color: #1e40af;
+        transform: scale(1.05);
+      }
+
+      /* Responsive Table */
+      @media (max-width: 768px) {
+        .pricing-table,
+        thead,
+        tbody,
+        th,
+        td,
+        tr {
+          display: block;
+        }
+
+        thead tr {
+          display: none;
+        }
+
+        tr {
+          margin-bottom: 20px;
+          border: 1px solid #ddd;
+          border-radius: 10px;
+          overflow: hidden;
+        }
+
+        td {
+          text-align: right;
+          padding: 15px;
+          position: relative;
+        }
+
+        td::before {
+          content: attr(data-label);
+          position: absolute;
+          left: 15px;
+          font-weight: bold;
+          text-transform: uppercase;
+          color: #4b5563;
+        }
+
+        td.price {
+          font-size: 1.2rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="logo">AshirDev</div>
+      <ul id="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Portfolio</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <div class="hamburger" id="hamburger">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </nav>
+
+    <!-- Pricing Table -->
+    <table class="pricing-table">
+      <thead>
+        <tr>
+          <th>Plan</th>
+          <th>Price</th>
+          <th>Projects</th>
+          <th>Storage</th>
+          <th>Support</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td data-label="Plan">Basic</td>
+          <td data-label="Price" class="price">$9/mo</td>
+          <td data-label="Projects">5</td>
+          <td data-label="Storage">10GB</td>
+          <td data-label="Support">Email</td>
+          <td data-label="Action"><button>Select</button></td>
+        </tr>
+        <tr>
+          <td data-label="Plan">Standard</td>
+          <td data-label="Price" class="price">$19/mo</td>
+          <td data-label="Projects">15</td>
+          <td data-label="Storage">50GB</td>
+          <td data-label="Support">Priority Email</td>
+          <td data-label="Action"><button>Select</button></td>
+        </tr>
+        <tr>
+          <td data-label="Plan">Premium</td>
+          <td data-label="Price" class="price">$29/mo</td>
+          <td data-label="Projects">Unlimited</td>
+          <td data-label="Storage">200GB</td>
+          <td data-label="Support">24/7</td>
+          <td data-label="Action"><button>Select</button></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Navbar JS -->
+    <script>
+      const hamburger = document.getElementById("hamburger");
+      const navLinks = document.getElementById("nav-links");
+
+      hamburger.addEventListener("click", () => {
+        navLinks.classList.toggle("show");
+      });
+    </script>
+  </body>
+</html>

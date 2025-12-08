@@ -1,0 +1,149 @@
+<!--  Design a pricing table with hover effects -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pricing Table</title>
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f0f2f5;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 50px 20px;
+      }
+
+      table {
+        border-collapse: collapse;
+        width: 90%;
+        max-width: 800px;
+        background-color: #fff;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      th,
+      td {
+        text-align: center;
+        padding: 20px;
+        border-bottom: 1px solid #e5e7eb;
+      }
+
+      th {
+        background-color: #1e3a8a;
+        color: #fff;
+        font-size: 1.1rem;
+      }
+
+      tr:hover td {
+        background-color: #f3f4f6;
+        transition: background-color 0.3s;
+      }
+
+      td.price {
+        font-size: 1.5rem;
+        color: #2563eb;
+        font-weight: bold;
+      }
+
+      td button {
+        padding: 10px 20px;
+        background-color: #2563eb;
+        color: #fff;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        font-weight: 600;
+        transition: background-color 0.3s;
+      }
+
+      td button:hover {
+        background-color: #1e40af;
+      }
+
+      @media (max-width: 768px) {
+        table,
+        thead,
+        tbody,
+        th,
+        td,
+        tr {
+          display: block;
+        }
+
+        thead tr {
+          display: none;
+        }
+
+        tr {
+          margin-bottom: 20px;
+          border: 1px solid #ddd;
+          border-radius: 10px;
+          overflow: hidden;
+        }
+
+        td {
+          text-align: right;
+          padding: 15px;
+          position: relative;
+        }
+
+        td::before {
+          content: attr(data-label);
+          position: absolute;
+          left: 15px;
+          font-weight: bold;
+          text-transform: uppercase;
+          color: #4b5563;
+        }
+
+        td.price {
+          font-size: 1.2rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <thead>
+        <tr>
+          <th>Plan</th>
+          <th>Price</th>
+          <th>Projects</th>
+          <th>Storage</th>
+          <th>Support</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td data-label="Plan">Basic</td>
+          <td data-label="Price" class="price">$9/mo</td>
+          <td data-label="Projects">5</td>
+          <td data-label="Storage">10GB</td>
+          <td data-label="Support">Email</td>
+          <td data-label="Action"><button>Select</button></td>
+        </tr>
+        <tr>
+          <td data-label="Plan">Standard</td>
+          <td data-label="Price" class="price">$19/mo</td>
+          <td data-label="Projects">15</td>
+          <td data-label="Storage">50GB</td>
+          <td data-label="Support">Priority Email</td>
+          <td data-label="Action"><button>Select</button></td>
+        </tr>
+        <tr>
+          <td data-label="Plan">Premium</td>
+          <td data-label="Price" class="price">$29/mo</td>
+          <td data-label="Projects">Unlimited</td>
+          <td data-label="Storage">200GB</td>
+          <td data-label="Support">24/7</td>
+          <td data-label="Action"><button>Select</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

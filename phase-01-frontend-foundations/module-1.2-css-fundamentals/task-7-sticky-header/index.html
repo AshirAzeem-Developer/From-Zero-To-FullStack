@@ -1,0 +1,55 @@
+<!-- Build a sticky header that changes style on scroll (using CSS only) -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sticky Header</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      /* Sticky Header */
+      header {
+        position: sticky;
+        top: 0;
+        width: 100%;
+        padding: 20px 40px;
+        background-color: rgba(30, 58, 138, 0.8); /* semi-transparent */
+        color: #fff;
+        font-size: 1.5rem;
+        font-weight: bold;
+        z-index: 1000;
+        transition: background-color 0.3s ease, padding 0.3s ease,
+          box-shadow 0.3s ease;
+        backdrop-filter: blur(5px); /* subtle blur when scrolled */
+      }
+
+      /* Change style when user scrolls past 50px */
+      body:has(header:sticky) header {
+        /* NOTE: :has() + sticky support is experimental in browsers */
+        /* But we will simulate style change by shrinking padding */
+        padding: 10px 40px;
+        background-color: #1e3a8a;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      }
+
+      /* Page content for scrolling */
+      .content {
+        height: 2000px;
+        background: linear-gradient(to bottom, #f0f2f5 0%, #dbeafe 100%);
+        padding: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>Sticky Header</header>
+
+    <div class="content">
+      <h1>Scroll Down to See the Effect</h1>
+      <p>Keep scrolling to notice the header style changing as you scroll.</p>
+    </div>
+  </body>
+</html>
