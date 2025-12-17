@@ -1,0 +1,105 @@
+<!-- Task 3: Create a responsive pricing section with hover animations -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive pricing section</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body>
+    <section class="bg-gray-100 py-16 px-6">
+      <div class="max-w-6xl mx-auto">
+        <!-- Section Heading -->
+        <div class="text-center mb-12">
+          <h2 class="text-4xl font-bold mb-4">Simple Pricing</h2>
+          <p class="text-gray-600 max-w-xl mx-auto">
+            Choose a plan that fits your needs. Upgrade or downgrade anytime.
+          </p>
+        </div>
+
+        <!-- Pricing Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Basic Plan -->
+          <div
+            class="bg-white rounded-2xl p-8 text-center shadow-md transition transform hover:scale-105 hover:shadow-xl"
+          >
+            <h3 class="text-xl font-semibold mb-2">Basic</h3>
+            <p class="text-gray-500 mb-4">For personal use</p>
+
+            <div class="text-4xl font-bold mb-6">
+              $9<span class="text-base font-medium">/mo</span>
+            </div>
+
+            <ul class="text-gray-600 space-y-3 mb-6">
+              <li>✔ 1 Project</li>
+              <li>✔ Basic Support</li>
+              <li>✔ Limited Storage</li>
+            </ul>
+
+            <button
+              class="w-full py-2 rounded-lg bg-gray-800 text-white hover:bg-gray-900 transition"
+            >
+              Get Started
+            </button>
+          </div>
+
+          <!-- Popular Plan -->
+          <div
+            class="relative bg-gradient-to-br from-indigo-600 to-purple-600 text-white rounded-2xl p-8 text-center shadow-xl transform scale-105"
+          >
+            <!-- Badge -->
+            <span
+              class="absolute top-4 right-4 bg-white text-indigo-600 text-xs font-bold px-3 py-1 rounded-full"
+            >
+              POPULAR
+            </span>
+
+            <h3 class="text-xl font-semibold mb-2">Pro</h3>
+            <p class="text-white/90 mb-4">Best for professionals</p>
+
+            <div class="text-4xl font-bold mb-6">
+              $29<span class="text-base font-medium">/mo</span>
+            </div>
+
+            <ul class="space-y-3 mb-6">
+              <li>✔ Unlimited Projects</li>
+              <li>✔ Priority Support</li>
+              <li>✔ Cloud Storage</li>
+            </ul>
+
+            <button
+              class="w-full py-2 rounded-lg bg-white text-purple-600 font-semibold hover:bg-gray-100 transition"
+            >
+              Choose Plan
+            </button>
+          </div>
+
+          <!-- Premium Plan -->
+          <div
+            class="bg-white rounded-2xl p-8 text-center shadow-md transition transform hover:scale-105 hover:shadow-xl"
+          >
+            <h3 class="text-xl font-semibold mb-2">Enterprise</h3>
+            <p class="text-gray-500 mb-4">For large teams</p>
+
+            <div class="text-4xl font-bold mb-6">
+              $99<span class="text-base font-medium">/mo</span>
+            </div>
+
+            <ul class="text-gray-600 space-y-3 mb-6">
+              <li>✔ Custom Solutions</li>
+              <li>✔ Dedicated Manager</li>
+              <li>✔ 24/7 Support</li>
+            </ul>
+
+            <button
+              class="w-full py-2 rounded-lg bg-gray-800 text-white hover:bg-gray-900 transition"
+            >
+              Contact Sales
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

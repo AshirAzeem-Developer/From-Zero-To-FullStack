@@ -1,0 +1,98 @@
+<!--Task 5: Create a feature grid layout -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Feature Grid</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body>
+    <section class="bg-white py-16 px-6">
+      <div class="max-w-6xl mx-auto">
+        <!-- Section Heading -->
+        <div class="text-center mb-12">
+          <h2 class="text-4xl font-bold mb-3">Powerful Features</h2>
+          <p class="text-gray-600 max-w-xl mx-auto">
+            Everything you need to build modern, scalable applications.
+          </p>
+        </div>
+
+        <!-- Feature Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <!-- Feature Card -->
+          <div
+            class="p-6 rounded-xl border border-gray-200 hover:shadow-lg transition"
+          >
+            <!-- Icon -->
+            <div
+              class="w-12 h-12 mb-4 flex items-center justify-center rounded-lg bg-indigo-100 text-indigo-600 text-xl"
+            >
+              ⚡
+            </div>
+
+            <!-- Title -->
+            <h3 class="text-lg font-semibold mb-2">Fast Performance</h3>
+
+            <!-- Description -->
+            <p class="text-gray-600 text-sm">
+              Optimized code ensures blazing fast load times and smooth
+              experience.
+            </p>
+          </div>
+
+          <!-- Feature Card -->
+          <div
+            class="p-6 rounded-xl border border-gray-200 hover:shadow-lg transition"
+          >
+            <div
+              class="w-12 h-12 mb-4 flex items-center justify-center rounded-lg bg-green-100 text-green-600 text-xl"
+            >
+              🔒
+            </div>
+
+            <h3 class="text-lg font-semibold mb-2">Secure by Default</h3>
+
+            <p class="text-gray-600 text-sm">
+              Built with security best practices to keep your data safe.
+            </p>
+          </div>
+
+          <!-- Feature Card -->
+          <div
+            class="p-6 rounded-xl border border-gray-200 hover:shadow-lg transition"
+          >
+            <div
+              class="w-12 h-12 mb-4 flex items-center justify-center rounded-lg bg-pink-100 text-pink-600 text-xl"
+            >
+              🎨
+            </div>
+
+            <h3 class="text-lg font-semibold mb-2">Modern Design</h3>
+
+            <p class="text-gray-600 text-sm">
+              Clean, modern UI components that users love.
+            </p>
+          </div>
+
+          <!-- Feature Card -->
+          <div
+            class="p-6 rounded-xl border border-gray-200 hover:shadow-lg transition"
+          >
+            <div
+              class="w-12 h-12 mb-4 flex items-center justify-center rounded-lg bg-yellow-100 text-yellow-600 text-xl"
+            >
+              📱
+            </div>
+
+            <h3 class="text-lg font-semibold mb-2">Fully Responsive</h3>
+
+            <p class="text-gray-600 text-sm">
+              Looks perfect on mobile, tablet, and desktop devices.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

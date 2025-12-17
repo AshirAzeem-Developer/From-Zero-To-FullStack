@@ -1,0 +1,44 @@
+<!-- Task 2: Build a modern card component with gradient backgrounds -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modern Card Component</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body>
+    <div class="min-h-screen flex items-center justify-center bg-gray-100 p-6">
+      <div
+        class="max-w-sm w-full rounded-2xl p-6 bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 text-white shadow-xl transition transform hover:scale-105 hover:shadow-2xl"
+      >
+        <!-- Icon / Badge -->
+        <div
+          class="w-12 h-12 mb-4 flex items-center justify-center rounded-full bg-white/20"
+        >
+          🚀
+        </div>
+
+        <!-- Title -->
+        <h3 class="text-2xl font-bold mb-2">Premium Plan</h3>
+
+        <!-- Description -->
+        <p class="text-white/90 mb-4">
+          Unlock advanced features, faster performance and priority support.
+        </p>
+
+        <!-- Price -->
+        <div class="text-3xl font-extrabold mb-4">
+          $29<span class="text-base font-medium">/month</span>
+        </div>
+
+        <!-- Button -->
+        <button
+          class="w-full bg-white text-purple-600 font-semibold py-2 rounded-lg hover:bg-gray-100 transition"
+        >
+          Get Started
+        </button>
+      </div>
+    </div>
+  </body>
+</html>

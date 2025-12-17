@@ -1,0 +1,86 @@
+<!--Task 4: Design a testimonial slider layout -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Testimonial Slider</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body>
+    <section class="bg-gray-100 py-16 px-6">
+      <div class="max-w-5xl mx-auto">
+        <!-- Section Heading -->
+        <div class="text-center mb-12">
+          <h2 class="text-4xl font-bold mb-3">What Our Clients Say</h2>
+          <p class="text-gray-600 max-w-xl mx-auto">
+            Real feedback from people who trust our services.
+          </p>
+        </div>
+
+        <!-- Slider Wrapper -->
+        <div class="relative overflow-hidden">
+          <!-- Slides Container -->
+          <div
+            class="flex transition-transform duration-500 ease-in-out"
+            style="transform: translateX(0%)"
+          >
+            <!-- Testimonial Card -->
+            <div class="min-w-full px-4">
+              <div class="bg-white rounded-2xl shadow-lg p-8 text-center">
+                <!-- Avatar -->
+                <img
+                  src="https://i.pravatar.cc/100?img=12"
+                  class="w-20 h-20 mx-auto rounded-full mb-4"
+                  alt="client"
+                />
+
+                <!-- Quote -->
+                <p class="text-gray-600 italic mb-6">
+                  “This team transformed our business. The design and
+                  performance exceeded our expectations.”
+                </p>
+
+                <!-- Name -->
+                <h4 class="font-semibold text-lg">Sarah Ahmed</h4>
+                <span class="text-sm text-gray-500">Product Manager</span>
+              </div>
+            </div>
+
+            <!-- Testimonial Card -->
+            <div class="min-w-full px-4">
+              <div class="bg-white rounded-2xl shadow-lg p-8 text-center">
+                <img
+                  src="https://i.pravatar.cc/100?img=32"
+                  class="w-20 h-20 mx-auto rounded-full mb-4"
+                  alt="client"
+                />
+
+                <p class="text-gray-600 italic mb-6">
+                  “Professional, fast, and reliable. Highly recommended for
+                  modern web solutions.”
+                </p>
+
+                <h4 class="font-semibold text-lg">Ali Raza</h4>
+                <span class="text-sm text-gray-500">Startup Founder</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Navigation Buttons -->
+          <button
+            class="absolute left-0 top-1/2 -translate-y-1/2 bg-white shadow-md w-10 h-10 rounded-full flex items-center justify-center hover:bg-gray-100 transition"
+          >
+            ‹
+          </button>
+
+          <button
+            class="absolute right-0 top-1/2 -translate-y-1/2 bg-white shadow-md w-10 h-10 rounded-full flex items-center justify-center hover:bg-gray-100 transition"
+          >
+            ›
+          </button>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
